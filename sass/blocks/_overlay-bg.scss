@@ -1,0 +1,23 @@
+.overlay-bg{
+    display: flex;
+
+    visibility: hidden;
+
+    opacity: 0;
+    transition: opacity 0.5s linear, visibility 0.5s linear;
+}
+
+.overlay-bg--active{
+    visibility: visible;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    z-index: 9;
+
+    background-color: rgb(44, 52, 73);
+    opacity: 0.75;
+}

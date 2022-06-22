@@ -1,0 +1,51 @@
+/* Sticky Footer */
+
+.footer {
+	//margin-top: auto; /* sticky footer */
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    border: 0;
+
+	background-color: rgb(51, 51, 51);
+}
+
+.footer__title {
+    margin-bottom: 20px;
+}
+
+.footer__text{
+    margin-bottom: 10px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.footer__link{
+    position: relative;
+
+    width: fit-content;
+
+    text-decoration: none;
+    color: rgb(176, 176, 176);
+
+    &:hover,
+    &:active{
+        color: #fff;
+    }
+
+    &::before{
+        content: '';
+        display: block;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+        
+        background-color: rgb(176, 176, 176);
+    }
+}

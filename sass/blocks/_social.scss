@@ -1,0 +1,25 @@
+.social {
+    display: flex;
+}
+
+.social__item {
+    margin-right: 30px;
+
+    transition: opacity 0.5s;
+
+    &:last-child{
+        margin-right: 0;
+    }
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.contacts__links .social{
+    margin-top: 50px;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        margin-top: 40px;
+    }
+}

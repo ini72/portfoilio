@@ -1,0 +1,227 @@
+.how-i-work {
+    padding-top: 150px;
+    padding-bottom: 120px;
+
+    background-image: url(./../img/lines/lines-how-i-work.jpg);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: auto;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+
+        background-image: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}
+
+.how-i-work__title .title-2{
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        font-size: 34px;
+    }
+}
+
+.how-i-work__title {
+    text-align: center;
+}
+
+.time-line {
+    margin-top: 190px;
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        margin-top: 55px;
+    }
+}
+
+.time-line__item {
+    display: flex;
+
+    position: relative;
+    min-height: 150px;
+
+    margin-bottom: 100px;
+
+    text-align: right;
+
+    &::after{
+        content: "";
+
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+
+        width: 4px;
+
+        padding-top: 120px;
+
+        background-color: rgb(225, 238, 244);
+
+        /* Tablet */
+        @media (max-width: 1199px) {
+            bottom: 270px;
+        }
+
+        /* Mobile */
+        @media (max-width: 767px) {
+            bottom: 110px;
+        }
+
+        /* Mobile XS */
+        @media (max-width: 499px) {
+            bottom: 120px;
+        } 
+    }
+
+    &:first-child::after{
+        padding-top: 60px;
+        }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: left;
+
+        min-height: 150px;
+
+        margin-bottom: 100px;
+
+        /* Tablet */
+        @media (max-width: 1199px) {
+            min-height: 220px;
+
+            margin-bottom: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 767px) {
+            min-height: 180px;
+
+            margin-bottom: 70px;
+
+            &:after{
+                padding-top: 130px;
+            }
+        }
+
+        /* Mobile XS */
+        @media (max-width: 499px) {
+            min-height: 195px;
+        }
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        max-width: 100%;
+        min-height: 220px;
+
+        margin-bottom: 30px;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        min-height: 180px;
+
+        margin-bottom: 70px;
+
+        text-align: left;
+
+        &:nth-child(odd){
+            flex-direction: row-reverse;
+        }
+
+        &:first-child::after{
+            width: 0;
+        }
+
+        &::after{
+            padding-top: 130px;
+            left: 37px;
+            bottom: 115%;
+        }
+    }
+
+    /* Mobile XS */
+    @media (max-width: 499px) {
+        min-height: 195px;
+
+        &::after{
+            left: 37px;
+            bottom: 115%;
+        }
+    }
+}
+
+.time-line__description {
+    max-width: 470px;
+
+    &:hover .line-bottom::after {
+        background: rgb(234, 115, 109);
+    }
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        max-width: 390px;
+    }
+
+    /* Tablet XS */
+    @media (max-width: 991px) {
+        max-width: 280px;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        max-width: 350px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 499px) {
+        max-width: 65%;
+    }
+}
+
+.time-line__title {
+    margin-bottom: 15px;
+}
+
+.time-line__text {
+    margin-bottom: 15px;
+}
+
+.time-line__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 74px;
+    height: 74px;
+
+    position: absolute;
+    top: -22px;
+    right: 50%;
+    transform: translateX(50%);
+
+    border-radius: 28px;
+    background-color: #fff;
+    box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+
+    /* Mobile */
+        @media (max-width: 767px) {
+            bottom: 0;
+            top: 0;
+            right: 100%;
+            transform: translateX(100%);
+        }
+}

@@ -1,0 +1,122 @@
+.card-big {
+    flex-grow: 1;
+
+    max-width: 49%;
+
+    margin-right: 30px;
+    margin-bottom: 50px;
+
+    text-decoration: none;
+    transition: 0.5s;
+    overflow: hidden;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+
+    &:nth-child(even){
+        margin-right: 0;
+    }
+
+    &:hover{
+        .card-button{
+            transform: translate(-50%, -50%);
+        }
+
+        .title-5{
+            color: rgb(237, 87, 79);
+            
+            &::before{
+            content: '';
+
+            display: block;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 2px;
+
+            background-color: rgb(237, 87, 79);
+            }
+        }
+
+        .card-big__img{
+            &::after{
+               transform: translateX(0);
+            }
+        }
+    } 
+         
+    /* Tablet */
+    @media (max-width: 1199px) {
+        max-width: 48.4%;
+        
+        margin-bottom: 45px;
+    }
+
+    /* Tablet XS */
+    @media (max-width: 991px) {
+        max-width: 47.9%;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        max-width: 360px;
+
+        margin-right: 0;
+    }
+}
+
+.card-big__img{
+    position: relative;
+
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: translate(-100%, -100%);
+        
+        width: 100%;
+        height: 100%;
+        
+        background-color: rgba(255, 227, 102, 0.2);
+        z-index: 1;
+        transition: 0.5s;
+    }
+}
+
+.card-big__title {
+    margin-top: 25px;
+
+    /* Tablet XS */
+    @media (max-width: 991px) {
+        width: 320px;
+
+        overflow: hidden;
+        text-overflow: clip;
+        white-space: nowrap;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        width: auto;
+
+        overflow: visible;
+        white-space: normal;
+    }
+}
+
+.card-big__title .title-5{
+    position: relative;
+
+    width: fit-content;
+}
+
+.card-big__text {
+    margin-top: 10px;
+}
