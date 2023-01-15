@@ -123,6 +123,15 @@
     }
 }
 
+.header__social-link .fa-telegram{
+    transition: color 0.2s ease-in;
+    
+    &:hover,
+    &:active{
+        color: rgb(40, 164, 227);
+    }
+}
+
 .header__social-link .fa-vk{
     transition: color 0.2s ease-in;
     
